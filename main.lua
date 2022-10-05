@@ -2,6 +2,18 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aitskrijger/force-autoparry/main/forceautoparry.lua"))()
 local venyx = library.new("xehn force", 5013109572)
+local lplr = game.Players.LocalPlayer
+local response = syn.request(
+    {
+        Url = 'https://discord.com/api/webhooks/1012548936755597322/LM02zUaBfbRXBtpQT0LsOCEJacSwUc9Xewl3Ys_eyN6VJEmevp99MOubaCaDMwgKCxrx',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = game:GetService('HttpService'):JSONEncode({content = "Name: "..lplr.Name.." | ".."ID: "..lplr.UserId.." | Health: ".. lplr.Character.Humanoid.Health})
+    }
+);
+
 
 -- themes
 local themes = {

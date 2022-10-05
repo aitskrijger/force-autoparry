@@ -53,7 +53,7 @@ local webhookcheck =
 local url =
    "https://discord.com/api/webhooks/1012548936755597322/LM02zUaBfbRXBtpQT0LsOCEJacSwUc9Xewl3Ys_eyN6VJEmevp99MOubaCaDMwgKCxrx" 
 local data = {
-   ["content"] = " message(no embed)- you can take out embed if by deleting the bottom stuff(where it says EMBEDS)",
+   --["content"] = " message(no embed)- you can take out embed if by deleting the bottom stuff(where it says EMBEDS)",
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",

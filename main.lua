@@ -88,15 +88,22 @@ TextColor = Color3.fromRGB(255, 255, 255)
 
 -- first page
 local page = venyx:addPage("Test", 5012544693)
---local section1 = page:addSection("Section 1")
+local section1 = page:addSection("Section 1")
 local section2 = page:addSection("Teleports")
 
 --section1:addToggle("Toggle", nil, function(value)
 --print("Toggled", value)
 --end)
---section1:addButton("Button", function()
---print("Clicked")
---end)
+section1:addButton("Kill aggroed npcs", function()
+    if game.Workspace.FilteringEnabled == false then
+        game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 0
+    end
+    if game.Workspace.FilteringEnabled == true then
+        local player=game.Players.LocalPlayer.Character
+        player.Humanoid:Remove()
+        Instance.new('Humanoid',player)
+    end
+end)
 --section1:addTextbox("Notification", "Default", function(value, focusLost)
 --print("Input", value)
 
@@ -138,6 +145,9 @@ colors:addColorPicker(theme, color, function(color3)
 venyx:setTheme(theme, color3)
 end)
 end
+
+local plr = game:GetService("Players").LocalPlayer
+local mouse = plr:GetMouse()
 
 -- load
 venyx:SelectPage(venyx.pages[1], true)
